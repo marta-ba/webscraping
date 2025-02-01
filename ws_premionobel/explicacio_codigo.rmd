@@ -1,0 +1,21 @@
+---
+title: "Explicación del Código de main.py"
+--- 
+# Explicación del código
+
+ - Encabezado y solicitud HTTP:
+
+        - Incluye un User-Agent para simular un navegador y evitar ser bloqueado.
+        - Verifica el código de estado (status_code) para asegurarte de que la página se haya cargado correctamente.
+        
+- Búsqueda de la tabla:
+        - Usamos soup.find para buscar la tabla con clase wikitable.
+        - Si no se encuentra la tabla, mostramos un mensaje de error.
+
+- Extracción de datos:
+        - Iteramos sobre las filas (tr) y las celdas (td) de la tabla.
+        - Extraemos los valores de cada columna: Año, Nombre y Nacionalidad.
+        - Si alguna celda está ausente, usamos un valor predeterminado (Desconocida).
+
+- Guardado en CSV:
+        - Usamos la librería pandas para convertir los datos en un archivo CSV llamado premios_nobel_literatura.csv.
