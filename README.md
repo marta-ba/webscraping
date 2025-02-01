@@ -1,1 +1,1 @@
-# webscraping
+# kinds of web scraping
